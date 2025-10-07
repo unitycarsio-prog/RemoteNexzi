@@ -8,12 +8,13 @@ export interface SessionState {
   remoteStream: MediaStream | null;
   error: string | null;
   role: SessionRole;
-  incomingCall: { from: string } | null;
+  offerSdp: string | null;
+  answerSdp: string | null;
 }
 
 export interface SessionContextType extends SessionState {
-  connectToRemote: (remoteId: string) => Promise<void>;
+  createOffer: () => Promise<void>;
+  createAnswer: (offer: string) => Promise<void>;
+  acceptAnswer: (answer: string) => Promise<void>;
   endSession: () => void;
-  acceptCall: () => Promise<void>;
-  rejectCall: () => void;
 }
