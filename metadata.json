@@ -1,0 +1,7 @@
+{
+  "name": "RemoteNexzi",
+  "description": "A web-based remote desktop application named RemoteNexzi that simulates screen sharing sessions, enhanced with AI-powered instructions for a seamless user experience.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
