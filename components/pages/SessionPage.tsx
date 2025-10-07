@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSession } from '../../context/SessionContext';
@@ -42,7 +43,7 @@ const SessionPage: React.FC = () => {
   }
 
   return (
-    <div className="w-full h-full bg-black relative flex items-center justify-center">
+    <div className="w-full self-stretch bg-black relative flex items-center justify-center">
       <video
         ref={videoRef}
         autoPlay
